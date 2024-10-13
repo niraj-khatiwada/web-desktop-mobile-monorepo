@@ -1,0 +1,36 @@
+{
+  "name": "next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "openapi-ts"
+  },
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.4.1",
+    "@tanstack/react-query": "^5.29.2",
+    "axios": "^1.7.4",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.53.10",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8",
+    "prettier": "3.2.5",
+    "typescript": "^5",
+    "tsconfig": "workspace:*",
+    "tailwind-config": "workspace:*"
+  }
+}
