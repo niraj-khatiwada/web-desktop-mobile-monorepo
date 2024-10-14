@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/node.json",
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "dist-electron"
+  },
+  "include": ["electron/**/*.ts"],
+  "exclude": ["node_modules"]
+}

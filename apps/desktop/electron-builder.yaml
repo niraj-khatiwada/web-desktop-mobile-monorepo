@@ -1,0 +1,12 @@
+appId: com.pnpm-monorepo
+productName: pnpm monorepo
+copyright: Copyright © 2024
+directories:
+  output: releases
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null

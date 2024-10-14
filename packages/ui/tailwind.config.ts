@@ -3,9 +3,10 @@ import { Config } from "tailwindcss";
 import baseConfig from "tailwind-config/tailwind.config";
 
 const config: Partial<Config> = {
-  plugins: [nextui()],
   presets: [baseConfig],
+  plugins: [nextui()],
   content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}",
     "../../node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
