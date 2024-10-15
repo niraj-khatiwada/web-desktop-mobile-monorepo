@@ -7,6 +7,7 @@ directories:
 files:
   - from: .
     filter:
-      - package.json
-      - app
+      - dist/**/*
+      - dist-electron/**/*
 publish: null
+
