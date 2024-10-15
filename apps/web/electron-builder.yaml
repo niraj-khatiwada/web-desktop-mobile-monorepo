@@ -9,5 +9,6 @@ files:
     filter:
       - dist/**/*
       - dist-electron/**/*
+      - "!dist-electron/**/*.ts"
 publish: null
 
