@@ -18,7 +18,7 @@ export function Button(props: ButtonProps) {
     <NextButton
       disableRipple
       color={color ?? "default"}
-      variant="shadow"
+      variant="flat"
       {...nextButtonProps}
       className={cn(["font-medium", nextButtonProps.className])}
     />
