@@ -4,7 +4,7 @@ import baseConfig from "tailwind-config/tailwind.config";
 
 const config: Partial<Config> = {
   presets: [baseConfig],
-  plugins: [nextui()],
+  plugins: [nextui({ addCommonColors: true })],
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}",
