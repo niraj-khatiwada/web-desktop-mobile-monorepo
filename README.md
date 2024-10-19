@@ -5,6 +5,6 @@
 ### Stack
 
 - pnpm workspace for monorepo setup
-- Turbo as a unified build system
+- Nx as a unified build system
 - Vite with React and Tanstack Router
 - Electron as a desktop layer

@@ -1,2 +1,6 @@
 node_modules
-.turbo
+.nx
+
+
+.nx/cache
+.nx/workspace-data
