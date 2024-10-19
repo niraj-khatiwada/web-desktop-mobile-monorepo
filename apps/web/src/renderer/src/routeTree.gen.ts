@@ -18,16 +18,19 @@ import { Route as UsersUserIdIndexImport } from './routes/users/$userId/index'
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const UsersIndexRoute = UsersIndexImport.update({
+  id: '/users/',
   path: '/users/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const UsersUserIdIndexRoute = UsersUserIdIndexImport.update({
+  id: '/users/$userId/',
   path: '/users/$userId/',
   getParentRoute: () => rootRoute,
 } as any)

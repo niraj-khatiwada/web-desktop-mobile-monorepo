@@ -1,0 +1,26 @@
+{
+  "extends": ["tsconfig/mobile.json", "expo/tsconfig.base"],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@env": ["./src/core/env.js"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "docs",
+    "cli",
+    "android",
+    "ios",
+    "lint-staged.config.js"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "main.ts"
+  ]
+}

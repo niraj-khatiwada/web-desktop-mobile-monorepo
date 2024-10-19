@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Next.js",
+  "display": "Web",
   "extends": "./base.json",
   "compilerOptions": {
     "target": "es5",
@@ -16,7 +16,5 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
-  },
-  "include": [],
-  "exclude": ["node_modules"]
+  }
 }

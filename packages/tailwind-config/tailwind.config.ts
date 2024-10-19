@@ -22,7 +22,7 @@ const CUSTOM_MQ = {
   h3xl: { raw: `(min-height: ${WIDTHS["3xl"]})` },
 };
 
-const config: Config = {
+const config: Omit<Config, "content"> = {
   theme: {
     extend: {
       backgroundImage: {
@@ -49,7 +49,5 @@ const config: Config = {
   content: [],
   plugins: [],
 };
-
-export type TailwindConfig = Config;
 
 export default config;
