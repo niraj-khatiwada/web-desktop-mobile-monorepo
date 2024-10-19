@@ -45,10 +45,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-font',
       {
-        fonts: [
-          './assets/fonts/GeistMonoVF.woff',
-          './assets/fonts/GeistVF.woff',
-        ],
+        // Variable fonts does not work properly on Android. So, make sure to use static fonts for mobile. Variable fonts work well on web though.
+        // Make sure to run `prebuild` script after adding/updating fonts
+        fonts: ['./assets/fonts/Montserrat/Montserrat.ttf'],
       },
     ],
     'expo-localization',

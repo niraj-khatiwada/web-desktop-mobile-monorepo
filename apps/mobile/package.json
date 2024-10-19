@@ -4,7 +4,7 @@
   "private": true,
   "main": "main.ts",
   "scripts": {
-    "start": "cross-env EXPO_NO_DOTENV=1 EXPO_USE_METRO_WORKSPACE_ROOT=1 EXPO_DEBUG=true expo start",
+    "start": "cross-env EXPO_NO_DOTENV=1 EXPO_USE_METRO_WORKSPACE_ROOT=1 EXPO_DEBUG=true expo start -c",
     "prebuild": "cross-env EXPO_NO_DOTENV=1 pnpm expo prebuild",
     "android": "cross-env EXPO_NO_DOTENV=1 expo run:android",
     "ios": "cross-env EXPO_NO_DOTENV=1 expo run:ios",

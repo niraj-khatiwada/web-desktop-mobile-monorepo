@@ -5,7 +5,7 @@ import os from 'os'
 // Custom APIs for renderer
 const api = {
   host: {
-    name: os.hostname(),
+    // name: os.hostname(),
     memory: os.totalmem(),
     cpusLength: os.cpus().length
   }

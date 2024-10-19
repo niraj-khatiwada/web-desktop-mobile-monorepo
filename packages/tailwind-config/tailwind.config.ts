@@ -22,7 +22,7 @@ const CUSTOM_MQ = {
   h3xl: { raw: `(min-height: ${WIDTHS["3xl"]})` },
 };
 
-const config: Omit<Config, "content"> = {
+const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
@@ -38,8 +38,7 @@ const config: Omit<Config, "content"> = {
         white1: "#ffffff",
       },
       fontFamily: {
-        geist: ["var(--font-geist)"],
-        geistMono: ["var(--font-geist-mono)"],
+        Montserrat: "var(--font-Montserrat)", // Make sure the key name is same as the font file name. This is necessary for mobile.
       },
       screens: { ...WIDTHS, ...CUSTOM_MQ },
       maxWidth: WIDTHS,

@@ -3,20 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Geist";
-  src: url("./src/assets/fonts/GeistVF.woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Geist Mono";
-  src: url("./src/assets/fonts/GeistMonoVF.woff");
+  font-family: "Montserrat";
+  src: url("./src/assets/fonts/Montserrat/Montserrat.ttf");
   font-display: swap;
 }
 
 :root {
-  --font-geist: "Geist", sans-serif;
-  --font-geist-mono: "Geist Mono", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -48,7 +41,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist);
+  font-family: var(--font-Montserrat);
+  font-weight: 400;
   margin: 0;
   padding: 0;
   width: 100vw;

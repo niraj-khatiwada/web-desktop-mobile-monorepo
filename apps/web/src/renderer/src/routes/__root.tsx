@@ -9,21 +9,21 @@ const isDev = import.meta.env.DEV
 function Root(): React.ReactNode {
   return (
     <React.Fragment>
-      <p>Hello From {window.electron ? 'Desktop' : 'Web'}</p>
+      <p className="text-4xl text-primary">Hello From {window.electron ? 'Desktop' : 'Web'}</p>
       {window.electron ? (
         <code>
           <pre>{JSON.stringify(window.api ?? {}, null, 2)}</pre>
         </code>
       ) : null}
       <nav>
-        <ul>
+        <ul className="flex gap-2">
           <li className="my-2">
-            <Button as={Link} href="/">
+            <Button variant="bordered" as={Link} href="/">
               Home
-            </Button>
+            </Button>{' '}
           </li>
           <li className="my-2">
-            <Button as={Link} href="/users">
+            <Button variant="bordered" as={Link} href="/users">
               Users
             </Button>
           </li>

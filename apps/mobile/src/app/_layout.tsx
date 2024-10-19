@@ -1,10 +1,9 @@
-/// We only import mobile specific css not web
+/// Only import mobile specific css not web
 import '../../global.css';
 
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { SplashScreen, Stack } from 'expo-router';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
 
@@ -29,16 +28,10 @@ export default function RootLayout() {
 
 function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <GestureHandlerRootView style={styles.container}>
+    <GestureHandlerRootView>
       <KeyboardProvider>
         <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
       </KeyboardProvider>
     </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
