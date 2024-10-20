@@ -9,12 +9,6 @@ const isDev = import.meta.env.DEV
 function Root(): React.ReactNode {
   return (
     <React.Fragment>
-      <p className="text-4xl text-primary">Hello From {window.electron ? 'Desktop' : 'Web'}</p>
-      {window.electron ? (
-        <code>
-          <pre>{JSON.stringify(window.api ?? {}, null, 2)}</pre>
-        </code>
-      ) : null}
       <nav>
         <ul className="flex gap-2">
           <li className="my-2">
@@ -29,6 +23,12 @@ function Root(): React.ReactNode {
           </li>
         </ul>
       </nav>
+      <p className="text-4xl text-primary">Hello From {window.electron ? 'Desktop' : 'Web'}</p>
+      {window.electron ? (
+        <code>
+          <pre>{JSON.stringify(window.api ?? {}, null, 2)}</pre>
+        </code>
+      ) : null}
       <Outlet />
       {isDev ? <TanStackRouterDevtools position="bottom-right" /> : null}
     </React.Fragment>

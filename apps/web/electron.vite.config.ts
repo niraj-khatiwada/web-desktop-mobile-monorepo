@@ -13,7 +13,10 @@ const isDesktop =
 
 console.log(`\x1b[33m🚀 Building for ${isDesktop ? 'DESKTOP' : 'WEB'} \x1b[0m`)
 
-const plugins: PluginOption[] = [TanStackRouterVite(), react()]
+const plugins: PluginOption[] = [
+  TanStackRouterVite({ routesDirectory: resolve('src/renderer/src/app') }), // tsr.config.json works only when it is placed in the renderer folder
+  react()
+]
 if (!isDesktop) {
   plugins.push(compression({ algorithm: 'brotliCompress' }))
 }

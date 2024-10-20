@@ -10,10 +10,10 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as UsersIndexImport } from './routes/users/index'
-import { Route as UsersUserIdIndexImport } from './routes/users/$userId/index'
+import { Route as rootRoute } from './app/__root'
+import { Route as IndexImport } from './app/index'
+import { Route as UsersIndexImport } from './app/users/index'
+import { Route as UsersUserIdIndexImport } from './app/users/$userId/index'
 
 // Create/Update Routes
 

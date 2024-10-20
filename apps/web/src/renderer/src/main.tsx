@@ -6,12 +6,12 @@ import { routeTree } from './routeTree.gen'
 import { ThemeProvider } from 'ui/src/providers/ThemeProvider'
 import { UIProvider } from 'ui/src/providers/UIProvider'
 
-const memoryHistory = createHashHistory()
+const hashHistory = createHashHistory()
 
 const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
-  ...(window.electron ? { history: memoryHistory } : {})
+  ...(window.electron ? { history: hashHistory } : {})
 })
 
 declare module '@tanstack/react-router' {
