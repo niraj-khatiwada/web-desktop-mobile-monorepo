@@ -1,0 +1,29 @@
+{
+  "extends": "tsconfig/web.json",
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "noEmit": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "vite-env.d.ts",
+    "electron.d.ts",
+    "vite.config.ts",
+    "tailwind.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

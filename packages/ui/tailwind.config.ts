@@ -2,7 +2,7 @@ import { nextui } from "@nextui-org/theme";
 import { Config } from "tailwindcss";
 import baseConfig from "tailwind-config/tailwind.config";
 
-const config: Partial<Config> = {
+const config: Config = {
   presets: [baseConfig],
   plugins: [nextui({ addCommonColors: true })],
   content: [

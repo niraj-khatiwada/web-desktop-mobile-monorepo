@@ -1,0 +1,38 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Shared package between web and desktop.",
+  "author": "codeforreal",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 5172"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.74.2",
+    "@tanstack/start": "^1.74.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@tanstack/router-cli": "^1.73.1",
+    "@tanstack/router-devtools": "^1.74.0",
+    "@tanstack/router-plugin": "1.74.2",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "10.4.16",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "postcss": "^8.4.31",
+    "prettier": "^3.3.2",
+    "tailwind-config": "workspace:*",
+    "tailwindcss": "^3.4.14",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  }
+}

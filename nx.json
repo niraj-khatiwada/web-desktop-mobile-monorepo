@@ -2,33 +2,23 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "format": {
-      "dependsOn": [
-        "^format"
-      ],
+      "dependsOn": ["^format"],
       "cache": true
     },
     "lint": {
-      "dependsOn": [
-        "^lint"
-      ],
+      "dependsOn": ["^lint"],
       "cache": true
     },
     "typecheck:node": {
-      "dependsOn": [
-        "^typecheck:node"
-      ],
+      "dependsOn": ["^typecheck:node"],
       "cache": true
     },
     "typecheck:web": {
-      "dependsOn": [
-        "^typecheck:web"
-      ],
+      "dependsOn": ["^typecheck:web"],
       "cache": true
     },
     "typecheck": {
-      "dependsOn": [
-        "^typecheck"
-      ],
+      "dependsOn": ["^typecheck"],
       "cache": true
     },
     "build": {

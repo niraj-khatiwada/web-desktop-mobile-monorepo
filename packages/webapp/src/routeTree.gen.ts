@@ -10,10 +10,11 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './app/__root'
-import { Route as IndexImport } from './app/index'
-import { Route as UsersIndexImport } from './app/users/index'
-import { Route as UsersUserIdIndexImport } from './app/users/$userId/index'
+import { Route as rootRoute } from './routes/__root'
+import { Route as IndexImport } from './routes/index'
+import { Route as UsersIndexImport } from './routes/users/index'
+import { Route as PostsIndexImport } from './routes/posts/index'
+import { Route as UsersUserIdIndexImport } from './routes/users/$userId/index'
 
 // Create/Update Routes
 
@@ -26,6 +27,12 @@ const IndexRoute = IndexImport.update({
 const UsersIndexRoute = UsersIndexImport.update({
   id: '/users/',
   path: '/users/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PostsIndexRoute = PostsIndexImport.update({
+  id: '/posts/',
+  path: '/posts/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -44,6 +51,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/posts/': {
+      id: '/posts/'
+      path: '/posts'
+      fullPath: '/posts'
+      preLoaderRoute: typeof PostsIndexImport
       parentRoute: typeof rootRoute
     }
     '/users/': {
@@ -67,12 +81,14 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/posts': typeof PostsIndexRoute
   '/users': typeof UsersIndexRoute
   '/users/$userId': typeof UsersUserIdIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/posts': typeof PostsIndexRoute
   '/users': typeof UsersIndexRoute
   '/users/$userId': typeof UsersUserIdIndexRoute
 }
@@ -80,27 +96,30 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/posts/': typeof PostsIndexRoute
   '/users/': typeof UsersIndexRoute
   '/users/$userId/': typeof UsersUserIdIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/users' | '/users/$userId'
+  fullPaths: '/' | '/posts' | '/users' | '/users/$userId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/users' | '/users/$userId'
-  id: '__root__' | '/' | '/users/' | '/users/$userId/'
+  to: '/' | '/posts' | '/users' | '/users/$userId'
+  id: '__root__' | '/' | '/posts/' | '/users/' | '/users/$userId/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PostsIndexRoute: typeof PostsIndexRoute
   UsersIndexRoute: typeof UsersIndexRoute
   UsersUserIdIndexRoute: typeof UsersUserIdIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PostsIndexRoute: PostsIndexRoute,
   UsersIndexRoute: UsersIndexRoute,
   UsersUserIdIndexRoute: UsersUserIdIndexRoute,
 }
@@ -118,12 +137,16 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/posts/",
         "/users/",
         "/users/$userId/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/posts/": {
+      "filePath": "posts/index.tsx"
     },
     "/users/": {
       "filePath": "users/index.tsx"

@@ -1,24 +1,13 @@
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createRouter, createHashHistory } from '@tanstack/react-router'
+import { RouterProvider } from '@tanstack/react-router'
 
 import 'ui/globals.css'
-import { routeTree } from './routeTree.gen'
 import { ThemeProvider } from 'ui/src/providers/ThemeProvider'
 import { UIProvider } from 'ui/src/providers/UIProvider'
+import { createRouter } from 'webapp/src/router'
 
-const hashHistory = createHashHistory()
-
-const router = createRouter({
-  routeTree,
-  defaultPreload: 'intent',
-  ...(window.electron ? { history: hashHistory } : {})
-})
-
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router
-  }
-}
+// The TSR will throw an error saying couldn't find `routes` folder for this app. We can ignore that since router is shared as a package
+const router = createRouter()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<App />)
 
