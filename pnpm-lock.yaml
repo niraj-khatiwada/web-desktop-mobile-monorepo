@@ -82,9 +82,6 @@ importers:
       eslint-plugin-react:
         specifier: ^7.34.3
         version: 7.37.1(eslint@8.57.1)
-      postcss:
-        specifier: ^8.4.31
-        version: 8.4.47
       prettier:
         specifier: ^3.3.2
         version: 3.3.3
