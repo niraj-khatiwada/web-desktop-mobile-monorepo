@@ -1,4 +1,5 @@
-out
-dist
+**/api
+**/build
+**/public
 pnpm-lock.yaml
-LICENSE.md
+routeTree.gen.ts
