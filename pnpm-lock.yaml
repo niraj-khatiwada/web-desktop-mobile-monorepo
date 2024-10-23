@@ -377,6 +377,9 @@ importers:
       vinxi:
         specifier: ^0.4.3
         version: 0.4.3(@types/node@20.16.13)(ioredis@5.4.1)(lightningcss@1.22.0)(terser@5.36.0)
+      zustand:
+        specifier: ^4.5.5
+        version: 4.5.5(@types/react@18.3.11)(react@18.3.1)
     devDependencies:
       '@types/node':
         specifier: ^20.12.11
@@ -22979,4 +22982,11 @@ snapshots:
       use-sync-external-store: 1.2.2(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.2.79
+      react: 18.3.1
+
+  zustand@4.5.5(@types/react@18.3.11)(react@18.3.1):
+    dependencies:
+      use-sync-external-store: 1.2.2(react@18.3.1)
+    optionalDependencies:
+      '@types/react': 18.3.11
       react: 18.3.1
